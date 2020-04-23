@@ -8,55 +8,107 @@ class App extends React.Component {
       {
         id: 1,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 990,
         imageUrl: "https://picsum.photos/400/400?a=1",
       },
       {
-        id: 1,
+        id: 2,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 30,
         imageUrl: "https://picsum.photos/400/400?a=2",
       },
       {
-        id: 1,
+        id: 3,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 40,
         imageUrl: "https://picsum.photos/400/400?a=3",
       },
       {
-        id: 1,
+        id: 4,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 20,
         imageUrl: "https://picsum.photos/400/400?a=4",
       },
       {
-        id: 1,
+        id: 5,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 60,
         imageUrl: "https://picsum.photos/400/400?a=5",
       },
       {
-        id: 1,
+        id: 6,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 100,
         imageUrl: "https://picsum.photos/400/400?a=6",
       },
       {
-        id: 1,
+        id: 7,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 90,
         imageUrl: "https://picsum.photos/400/400?a=7",
       },
       {
-        id: 1,
+        id: 8,
         name: "Foguete da Missão Apollo 11",
-        value: 10000.0,
+        value: 80,
         imageUrl: "https://picsum.photos/400/400?a=8",
       }
-    ]
+    ],
+
+    ordemPreco: 'crescente'
   }
+
+  onChangePreco = (event) => {
+    this.setState({ ordemPreco: event.target.ordemPreco })
+  }
+
   render() {
-    const listaDeProdutos = this.state.produtos.map((produto, index) => {
+
+    // const listaOrdenada = this.state.produtos.map((produto, index) => {
+
+    //   switch (this.state.ordemPreco) {
+    //     case 'crescente':
+    //       return ordemCrescente
+
+    //     case 'decrescente':
+    //       return ordemDecrescente
+    //     default:
+    //       return true
+    //   }
+    // })
+    // console.log(listaOrdenada)
+
+    let i = 0
+
+    const ordemCrescente = this.state.produtos.sort(function (a, b) {
+      return a.value - b.value
+    })
+    console.log('crescente', ordemCrescente)
+    // const ordemCrescente = this.state.produtos.sort(function (a, b) {
+    //   return b.value - a.value
+    // })
+    //console.log('cres', ordemCrescente)
+    
+    let ordem
+    switch (this.state.ordemPreco) {
+      case 'crescente':
+        ordem = ordemCrescente
+        break
+
+      case 'decrescente':
+        ordem = ordemCrescente
+        break
+
+      default:
+        return true
+    }
+
+
+
+    const listaDeProdutos = ordemCrescente.map((produto, index) => {
+
+      i++
+
       return (
         <Produtos key={index}
           name={produto.name}
@@ -65,11 +117,12 @@ class App extends React.Component {
         />
       )
     })
+
     return (
       <div className="App">
         <div>
-          <p>Quantidade de Produtos: </p>
-          <select>
+          <p>Quantidade de Produtos: {i}</p>
+          <select value={this.state.ordemPreco} onChange={this.onChangePreco}>
             <option value='crescente'>Preço: Crescente</option>
             <option value='decrescente'>Preço: Decrescente</option>
           </select>
