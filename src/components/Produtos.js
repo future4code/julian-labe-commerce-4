@@ -9,6 +9,12 @@ const Produtos = styled.div`
 `
 
 class Produto extends React.Component {
+
+    onClickComprar = () =>{
+        console.log("clicou")
+    }
+
+
     render() {
         return (
             <ProdutosContainer>
@@ -16,7 +22,7 @@ class Produto extends React.Component {
                     <img src={this.props.image} />
                     <p>{this.props.name}</p>
                     <p>R$ {this.props.value}</p>
-                    <button>Adicionar o Carrinho</button>
+                    <button onClick={this.onClickComprar}>Adicionar o Carrinho</button>
                 </Produtos>
             </ProdutosContainer>
         )

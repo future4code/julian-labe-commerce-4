@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Produtos from './components/Produtos'
+import Carrinho from './components/Carrinho'
 
 class App extends React.Component {
   state = {
@@ -12,43 +13,43 @@ class App extends React.Component {
         imageUrl: "https://picsum.photos/400/400?a=1",
       },
       {
-        id: 1,
+        id: 2,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=2",
       },
       {
-        id: 1,
+        id: 3,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=3",
       },
       {
-        id: 1,
+        id: 4,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=4",
       },
       {
-        id: 1,
+        id: 5,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=5",
       },
       {
-        id: 1,
+        id: 6,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=6",
       },
       {
-        id: 1,
+        id: 7,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=7",
       },
       {
-        id: 1,
+        id: 8,
         name: "Foguete da Missão Apollo 11",
         value: 10000.0,
         imageUrl: "https://picsum.photos/400/400?a=8",
@@ -67,6 +68,7 @@ class App extends React.Component {
     })
     return (
       <div className="App">
+        <Carrinho></Carrinho>
         <div>
           <p>Quantidade de Produtos: </p>
           <select>
@@ -75,6 +77,7 @@ class App extends React.Component {
           </select>
           {listaDeProdutos}
         </div>
+        
       </div>
     );
   }
