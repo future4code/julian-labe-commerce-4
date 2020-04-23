@@ -1,4 +1,4 @@
-### Sejam bem vindos ao Labe-commerce,
+### Sejam bem vindos ao Labe-commerce :computer:
 ##### esse repositório contém um esqueleto de app React e um .gitignore.
 
 ##### O "projeto de sexta" dessa semana terá dois dias e isso é proporcional ao esperado de vocês na entrega. 
