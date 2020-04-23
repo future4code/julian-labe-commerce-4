@@ -1,8 +1,7 @@
 ### Sejam bem vindos ao Labe-commerce :computer:
 ##### esse repositório contém um esqueleto de app React e um .gitignore.
 
-##### O "projeto de sexta" dessa semana terá dois dias e isso é proporcional ao esperado de vocês na entrega. 
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. Pretendo montar diferentes linhas de produtos. 
+##### e-commerce de itens espaciais :rocket: e vocês serão responsáveis por essa construção. Pretendo montar diferentes linhas de produtos. 
 
 ##### As possíveis linhas de produto são:
 - Satélites antigos;
