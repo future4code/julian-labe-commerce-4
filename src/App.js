@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Produtos from './components/Produtos'
+import Carrinho from './components/Carrinho'
 import Filtros from './components/Filtros'
 import styled from 'styled-components'
 
@@ -109,31 +110,10 @@ class App extends React.Component {
       return b.value - a.value
     })
 
-<<<<<<< HEAD
-        return ( <div className = "App" >
-            <div >
-            <p > QUANTIDADE DE PRODUTOS: { i } < /p> 
-            <select value = { this.state.ordemPreco }
-            onChange = { this.onChangePreco } >
-            <option value = "crescente" > Preço: Crescente < /option> <
-            option value = "decrescente" > Preço: Decrescente < /option> < /select > {
-                ordem.map((produto, index) => {
-                    return ( <
-                        Produtos key = { index }
-                        name = { produto.name }
-                        value = { produto.value }
-                        image = { produto.imageUrl }
-                        />
-                    )
-                })
-            } </div> < /div >
-        );
-=======
     if (this.state.ordemPreco === 'crescente') {
       ordem = lista
     } else if (this.state.ordemPreco === 'decrescente') {
       ordem = lista2
->>>>>>> 31a28d054555c07927a6df744b6f13c2bcd6c426
     }
 
     return (<div className="App" >
@@ -162,6 +142,7 @@ class App extends React.Component {
             }
           </Produto>
         </ContainerProdutos>
+       <Carrinho />
       </ContainerApp>
     </div>
     );
