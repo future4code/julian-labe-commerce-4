@@ -85,18 +85,13 @@ class App extends React.Component {
             ordem = lista2
         }
 
-        return ( <
-            div className = "App" >
-            <
-            div >
-            <
-            p > QUANTIDADE DE PRODUTOS: { i } < /p> <
-            select value = { this.state.ordemPreco }
+        return ( <div className = "App" >
+            <div >
+            <p > QUANTIDADE DE PRODUTOS: { i } < /p> 
+            <select value = { this.state.ordemPreco }
             onChange = { this.onChangePreco } >
-            <
-            option value = "crescente" > Preço: Crescente < /option> <
-            option value = "decrescente" > Preço: Decrescente < /option> < /
-            select > {
+            <option value = "crescente" > Preço: Crescente < /option> <
+            option value = "decrescente" > Preço: Decrescente < /option> < /select > {
                 ordem.map((produto, index) => {
                     return ( <
                         Produtos key = { index }
@@ -106,9 +101,7 @@ class App extends React.Component {
                         />
                     )
                 })
-            } <
-            /div> < /
-            div >
+            } </div> < /div >
         );
     }
 }
