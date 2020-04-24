@@ -9,9 +9,12 @@ const Produtos = styled.div`
 `
 
 class Produto extends React.Component {
-
+     
     onClickComprar = () =>{
-        console.log("clicou")
+       
+     
+        console.log('clicou')
+
     }
 
 

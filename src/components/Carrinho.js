@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Produtos from './Produtos'
 
 const MenuEsquerdo = styled.div`
     margin: 0;
@@ -16,11 +17,15 @@ const MenuEsquerdo = styled.div`
 
 class Carrinho extends React.Component{
 
+    state = {
+        valor: 0
+    }
+
     render(){
         return(
             <MenuEsquerdo>
             <h1>Carrinho:</h1>
-            <h3>Total: {this.props.valor}</h3>
+            <h3>Total: {this.state.valor}</h3>
             </MenuEsquerdo>
         )
     }
