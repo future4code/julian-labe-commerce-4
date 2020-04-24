@@ -54,79 +54,55 @@ class App extends React.Component {
         imageUrl: "https://picsum.photos/400/400?a=8",
       }
     ],
-
+    ordenagem: [],
     ordemPreco: 'crescente'
   }
 
   onChangePreco = (event) => {
-    this.setState({ ordemPreco: event.target.ordemPreco })
+    this.setState({ ordemPreco: event.target.value })
+    console.log('preco', this.state.ordemPreco)
   }
 
   render() {
-
-    // const listaOrdenada = this.state.produtos.map((produto, index) => {
-
-    //   switch (this.state.ordemPreco) {
-    //     case 'crescente':
-    //       return ordemCrescente
-
-    //     case 'decrescente':
-    //       return ordemDecrescente
-    //     default:
-    //       return true
-    //   }
-    // })
-    // console.log(listaOrdenada)
-
     let i = 0
+    let ordem
 
-    const ordemCrescente = this.state.produtos.sort(function (a, b) {
+    const lista = this.state.produtos.map((produto, index) => {
+      i++
+      return (produto)
+    }).sort(function (a, b) {
       return a.value - b.value
     })
-    console.log('crescente', ordemCrescente)
-    // const ordemCrescente = this.state.produtos.sort(function (a, b) {
-    //   return b.value - a.value
-    // })
-    //console.log('cres', ordemCrescente)
-    
-    let ordem
-    switch (this.state.ordemPreco) {
-      case 'crescente':
-        ordem = ordemCrescente
-        break
 
-      case 'decrescente':
-        ordem = ordemCrescente
-        break
-
-      default:
-        return true
-    }
-
-
-
-    const listaDeProdutos = ordemCrescente.map((produto, index) => {
-
-      i++
-
-      return (
-        <Produtos key={index}
-          name={produto.name}
-          value={produto.value}
-          image={produto.imageUrl}
-        />
-      )
+    const lista2 = this.state.produtos.map((produto, index) => {
+      return (produto)
+    }).sort(function (a, b) {
+      return b.value - a.value
     })
+
+    if (this.state.ordemPreco === 'crescente') {
+      ordem = lista
+    } else if (this.state.ordemPreco === 'decrescente') {
+      ordem = lista2
+    }
 
     return (
       <div className="App">
         <div>
           <p>Quantidade de Produtos: {i}</p>
           <select value={this.state.ordemPreco} onChange={this.onChangePreco}>
-            <option value='crescente'>Preço: Crescente</option>
-            <option value='decrescente'>Preço: Decrescente</option>
+            <option value="crescente">Preço: Crescente</option>
+            <option value="decrescente">Preço: Decrescente</option>
           </select>
-          {listaDeProdutos}
+          {ordem.map((produto, index) => {
+            return (
+              <Produtos key={index}
+                name={produto.name}
+                value={produto.value}
+                image={produto.imageUrl}
+              />
+            )
+          })}
         </div>
       </div>
     );
