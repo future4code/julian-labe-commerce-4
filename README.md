@@ -5,7 +5,7 @@
 #### Javascript
 #### JSX
 #### CSS
-
+##### imagens from pexels.com
 
 ##### e-commerce de itens espaciais :rocket: e diferentes linhas de produtos. 
 
