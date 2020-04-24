@@ -2,10 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ProdutosContainer = styled.div`
-    
 `
 const Produtos = styled.div`
-    
+    border: 1px solid;
+    width: 200px;
+    height: 280px;
+    margin-top: 10px; 
+`
+
+const Imagem = styled.img`
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
 `
 
 class Produto extends React.Component {
@@ -22,7 +30,7 @@ class Produto extends React.Component {
         return (
             <ProdutosContainer>
                 <Produtos>
-                    <img src={this.props.image} />
+                    <Imagem src={this.props.image} />
                     <p>{this.props.name}</p>
                     <p>R$ {this.props.value}</p>
                     <button onClick={this.onClickComprar}>Adicionar o Carrinho</button>

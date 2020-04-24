@@ -1,19 +1,27 @@
-### Sejam bem vindos ao Labe-commerce :computer:
-##### esse repositório contém um esqueleto de app React e um .gitignore.
+# Labe-commerce :computer:
+#### Esse repositório contém projeto de e-commerce (loja virtual) desenvolvido com 
+#### React 
+#### Node
+#### Javascript
+#### JSX
+#### CSS
+##### imagens from [Pexel](https://www.pexels.com/pt-br/procurar/nave%20espacial/)
 
-##### e-commerce de itens espaciais :rocket: e vocês serão responsáveis por essa construção. Pretendo montar diferentes linhas de produtos. 
+### e-commerce de itens espaciais :rocket: e diferentes linhas de produtos. 
 
-##### As possíveis linhas de produto são:
-- Satélites antigos;
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas à espaço;
-- Viagens espaciais;
-- Meteoritos / aerolitos como pedras preciosas;
-- Brinquedos e produtos infantis temáticos;
-- Naves / Foguetes / Ônibus espaciais;
+##### As linhas de produto são:
 
-Escolham uma linha dentro do grupo de vocês,
-e criem um e-commerce de acordo com as especificações.
-O prazo é até sexta, 17h. Sem atrasos.
-Como de costume, espero uma entrega no mínimo impecável.
-Att.
+- [x] Naves  
+- [x] Foguetes   
+- [x] Ônibus espaciais;
+
+
+#### Desenvolvedores
+- ###### [Géssica](https://github.com/gcas4)
+- ###### [Wellington](https://github.com/WellDMLT)
+- ###### [LouiseJ](https://github.com/louisejaqdev)
+
+#### Agradecimentos
+- ##### [Pedro Severo](https://github.com/pedro-severo)
+- ##### [Pedro Darvas](https://github.com/pdarvas)
+
