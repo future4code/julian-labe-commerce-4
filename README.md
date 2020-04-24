@@ -1,5 +1,11 @@
-### Labe-commerce :computer:
-##### esse repositório contém um esqueleto de app React e um .gitignore.
+## Labe-commerce :computer:
+#### Esse repositório contém projeto de e-commerce (loja virtual) desenvolvido com 
+#### React 
+#### Node
+#### Javascript
+#### JSX
+#### CSS
+
 
 ##### e-commerce de itens espaciais :rocket: e diferentes linhas de produtos. 
 
