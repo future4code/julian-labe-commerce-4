@@ -5,7 +5,7 @@
 #### Javascript
 #### JSX
 #### CSS
-##### imagens from pexels.com
+##### imagens from [Pexel](https://www.pexels.com/pt-br/procurar/nave%20espacial/)
 
 ##### e-commerce de itens espaciais :rocket: e diferentes linhas de produtos. 
 
