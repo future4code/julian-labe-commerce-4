@@ -6,11 +6,11 @@ const MenuEsquerdo = styled.div`
     margin: 0;
     padding: 0;
     width: 20vw;
-    height: 100vh;
-    position: absolute;
+    height: 97vh;
+    position: relative;
     top: 0;
     right: 0px;
-    border: 1px solid black;
+    border: 1px solid white;
 `
 
 
