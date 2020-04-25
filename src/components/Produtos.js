@@ -2,39 +2,41 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ProdutosContainer = styled.div`
-`
-const Produtos = styled.div`
     border: 1px solid;
-    width: 200px;
-    height: 280px;
-    margin-top: 10px; 
+    width: 180px;
+    height: 220px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 `
-
 const Imagem = styled.img`
     width: 100%;
     height: 50%;
     font-size: 15px;
 `
+const Paragrafo = styled.p`
+    margin: 0 5px;
+`
+const Botao = styled.button`
+    width: 100%;
+    margin: 0;
+`
 
 class Produto extends React.Component {
-     
-    onClickComprar = () =>{
-       
-     
+
+    onClickComprar = () => {
         console.log('clicou')
-
     }
-
 
     render() {
         return (
             <ProdutosContainer>
-                <Produtos>
-                    <Imagem src={this.props.image} />
-                    <p>{this.props.name}</p>
-                    <p>R$ {this.props.value}</p>
-                    <button onClick={this.onClickComprar}>Adicionar o Carrinho</button>
-                </Produtos>
+                <Imagem src={this.props.image} />
+                <Paragrafo>{this.props.name}</Paragrafo>
+                <Paragrafo>R$ {this.props.value}</Paragrafo>
+                <Botao onClick={this.onClickComprar}>Adicionar o Carrinho</Botao>
             </ProdutosContainer>
         )
     }
