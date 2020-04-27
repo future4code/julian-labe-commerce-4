@@ -1,31 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-import Produtos from './Produtos'
 
 const MenuEsquerdo = styled.div`
-    margin: 0;
+margin-top: 15px;
+    /* margin: 0;
     padding: 0;
     width: 20vw;
     height: 97vh;
     position: relative;
     top: 0;
     right: 0px;
-    border: 1px solid white;
+    border: 1px solid white; */
+`
+const Paragrafo = styled.p`
+margin:2px;
 `
 
 
 
-class Carrinho extends React.Component{
+class Carrinho extends React.Component {
 
     state = {
         valor: 0
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <MenuEsquerdo>
-            <h1>Carrinho:</h1>
-            <h3>Total: {this.state.valor}</h3>
+                <Paragrafo>{this.props.name}</Paragrafo>
+                <Paragrafo>R$ {this.props.value}</Paragrafo>
+                <button onClick={this.props.onClickApagar}>Excluir</button>
             </MenuEsquerdo>
         )
     }

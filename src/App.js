@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Carrinho from './components/Carrinho'
-import Filtros from './components/Filtros'
 import styled from 'styled-components'
 import Home from './components/Home';
 
 const ContainerApp = styled.div`
-  display: grid;
+padding: 10px;
+  /* display: grid;
   grid-template-columns: 6fr 1fr;
   gap: 10px;
-  padding: 10px;
+   */
 `
 const HomeContainer = styled.div`
   grid-column: 1/2;
@@ -79,9 +79,9 @@ class App extends React.Component {
         <HomeContainer>
           <Home state={this.state} />
         </HomeContainer>
-        <ContainerCarrinho>
+        {/* <ContainerCarrinho>
           <Carrinho />
-        </ContainerCarrinho>
+        </ContainerCarrinho> */}
       </ContainerApp>
     </div>
     );

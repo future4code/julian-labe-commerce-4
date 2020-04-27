@@ -24,19 +24,17 @@ const Botao = styled.button`
     margin: 0;
 `
 
-class Produto extends React.Component {
-
-    onClickComprar = () => {
-        console.log('clicou')
-    }
+class Produto extends React.Component {    
 
     render() {
+        const id = this.props.id
+        
         return (
             <ProdutosContainer>
                 <Imagem src={this.props.image} />
                 <Paragrafo>{this.props.name}</Paragrafo>
                 <Paragrafo>R$ {this.props.value}</Paragrafo>
-                <Botao onClick={this.onClickComprar}>Adicionar o Carrinho</Botao>
+                <Botao onClick={this.props.onClickComprar}>Adicionar o Carrinho</Botao>
             </ProdutosContainer>
         )
     }
